@@ -136,15 +136,18 @@ void hashMap::reHash(){
 
 
 //linear probling
-int hashMap::collHash1(int i, string k){
-	int index = getIndex(k);
+int hashMap::collHash1(int index, string k){
+	//int index = getIndex(k);
 
 	if(map[index] == NULL){
-
 		return index;
 	}else {
 		while(map[index] != NULL){
+			if(map[index]->keyword == k){
+				map[index]->addValue(k);
+			}
 			index++;
+			collisionct2++;
 			if(index == mapSize){
 				index = 0;
 			}
@@ -176,13 +179,14 @@ int hashMap::findKey(string k){
 	}
 
 	if(c1){
-		while(map[index] != NULL && map[index]->keyword != k){
-			index++;
-			if(index > mapSize){
-				index = 0;
-			}
-		}
-		return index;
+//		while(map[index] != NULL && map[index]->keyword != k){
+//			index++;
+//			if(index > mapSize){
+//				index = 0;
+//			}
+//		}
+//		return index;
+		return collHash1(index, k);
 	}else{
 		//quadratic probling
 	}

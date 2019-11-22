@@ -13,7 +13,7 @@ int main(){
 	srand(time(NULL));
 	makeSeuss trial = makeSeuss("DrSeuss.txt", "output0.txt", true, true);
 
-  makeSeuss trial2 = makeSeuss("DrSeuss.txt", "output1.txt", false, true);
+   makeSeuss trial2 = makeSeuss("DrSeuss.txt", "output1.txt", false, true);
 
 //	makeSeuss trial3 = makeSeuss("DrSeuss.txt", "output0.txt", true, false);
 //
