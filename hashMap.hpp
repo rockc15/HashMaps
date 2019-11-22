@@ -56,10 +56,11 @@ public:
 
 	void getClosestPrime();  // I used a binary search on an array of prime numbers to find the closest prime to double the map Size, and then set mapSize to that new prime.  You can include as one of the fields an array of prime numbers, or you can write a function that calculates the next prime number.  Whichever you prefer.
 	void reHash();  // when size of array is at 70%, double array size and rehash keys
-	int collHash1(int i, string k);  // getting index with collision method 1 (note – you may modify the parameters if you don’t need some/need more)
-    int collHash2(int i, string k);  // getting index with collision method 2 (note – you may modify the parameters if you don’t need some/need more)
+	int collHash1(int i, string k, string  v);  // getting index with collision method 1 (note – you may modify the parameters if you don’t need some/need more)
+    int collHash2(int i, string k, string v);  // getting index with collision method 2 (note – you may modify the parameters if you don’t need some/need more)
 	int findKey(string k);  //finds the key in the array and returns its index.  If it's not in the array, returns -1
 	void printMap();  //I wrote this solely to check if everything was working.
+	void printColl(); // print the number of collions from handleing and hashing
 };
 
 #endif /* HASHMAP_HPP_ */

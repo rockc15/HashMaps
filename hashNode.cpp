@@ -19,33 +19,41 @@ hashNode::hashNode(){
 
 hashNode::hashNode(string s){
 	keyword = s;
-	valuesSize = 101;
+	valuesSize = 10;
 	currSize = 0;
 	values = new string[valuesSize];
 }
 
 hashNode::hashNode(string s, string v){
 	keyword = s;
-	valuesSize = 100;
+	valuesSize = 10;
 	values = new string[valuesSize];
 	values[0] = v;
 	currSize = 1;
 }
 
+/*
+ * consumes: string v represing a values
+ *
+ * add the v to the values array
+ */
 void hashNode::addValue(string v){
+	if(valuesSize == currSize){
+		dblArray();
+	}
 
 	values[currSize] = v;
 	currSize++;
 
 
-	if(currSize >= valuesSize){
-		dblArray();
-	}
-
-	cout << "hey you added a values" << endl;
 
 }
 
+/*
+ * makes a new array that is twice the size of the values array
+ * then copies all the values in the new array and sets the
+ * values array to the new array
+ */
 void hashNode::dblArray(){
 	string * tmp = new string[valuesSize *2];
 	for(int i = 0; i < valuesSize; i++){
@@ -55,6 +63,10 @@ void hashNode::dblArray(){
 	valuesSize *= 2;
 }
 
+
+/*
+ * gets a random values from the nodes value array
+ */
 string hashNode::getRandValue(){
 	if(currSize == 0){
 		return "";

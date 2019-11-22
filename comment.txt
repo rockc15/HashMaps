@@ -1,0 +1,53 @@
+First output --- First Hashing function First collision function 
+	collision from hashing: 4948
+	collision from handling: 2054303
+
+	
+	favorate phases
+		My throne and he patted to my workshop
+		Santy Claus lied
+		I am doing eggs
+		with the first dreams without packages
+		I'm the little turtle Eleven!
+		Ah, me! perhaps, Don’t ask why
+		
+Second output --- Second hashing function first collision function
+	collision from hashing: 4425
+	collision from handling 19750
+	
+	favorate phases
+		They'd sing! And He turned or GRINCH GOT A place
+		Oh my!
+		They'd sing! And He burped!
+		They'd sing! And He burped!
+		GRINCH GOT A train!
+		And He lurks It one instead!
+
+Third output --- First hashing function second collisions function 
+	collision from hashing 4946
+	collision from handling 122207
+	
+	
+	favorate phrases
+		GRINCH GOT A WONDERFUL, AWFUL IDEA! 
+		"Tomorrow is coming!"
+		Grinchy Claus hissed
+		GRINCH GOT A yellow hat
+		Belly hat can't young and slunk,
+		He took every of me!
+
+Forth output --- second hashing function second collisions function		
+	collision from hashing 4405
+	collision from handling 9789
+	
+	
+	favorate phrase
+		Today is turtles barked back.
+		"I'm king, and of funny things	
+		if funny things really worked!
+		"I'm busy,
+		your Majesty, please?" "SILENCE!"
+		I'm the has eleven!
+		
+		
+		

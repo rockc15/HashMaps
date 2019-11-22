@@ -21,8 +21,8 @@ makeSeuss::makeSeuss(string f1,string f2,bool h1, bool c1) {
 	newfile = f2;
 	fn = f1;
 	readFile();
-	ht->printMap();
 	writeFile();
+
 }
 void makeSeuss::readFile() {
 	ifstream infile(fn.c_str(),ios::in);     // open file
@@ -40,17 +40,17 @@ void makeSeuss::readFile() {
 	ht->addKeyValue(key,value);
 	cout << endl;
 	infile.close();
+	ht->printMap();
+	ht->printColl();
+
 }
 void makeSeuss::writeFile() {
 
 	ofstream outfile(newfile.c_str(),ios::out);
 	outfile << ht->first << " ";
-	cout << "this must me a string " <<ht->first<< endl;
+
 	string key = "";
 	string value = ht->map[ht->getIndex(ht->first)]->getRandValue();
-	cout << "this is the values " << value << endl;
-	cout << "yoooooooooooooooooooooooooooooooooooooooooooooooooooooooo" << endl;
-
 	int ct = 0;
 	int len = 0;
 	while (ct < 500 &&  value != "") {
@@ -65,6 +65,5 @@ void makeSeuss::writeFile() {
 		ct ++;
 
 	}
-	cout << "file is closed" << endl;
 	outfile.close();
 }

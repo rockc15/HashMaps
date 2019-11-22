@@ -11,12 +11,32 @@
 
 int main(){
 	srand(time(NULL));
-	makeSeuss trial = makeSeuss("DrSeuss.txt", "output0.txt", true, true);
+	/*
+	 * TEST 1:
+	 * 		hashing: adding ASCII values for the
+	 * 		collisons: linear probling
+	 */
+	makeSeuss trial = makeSeuss("DrSeuss.txt", "output_firstHash_firstColl.txt", true, true);
 
-   makeSeuss trial2 = makeSeuss("DrSeuss.txt", "output1.txt", false, true);
+	/*
+	 * TEST 2:
+	 * 		hashing: Use all N characters of string as an N-digit base-19 number
+	 * 		collisons: linear probling
+	 */
+    makeSeuss trial2 = makeSeuss("DrSeuss.txt", "output_secondHash_firstColl.txt", false, true);
 
-//	makeSeuss trial3 = makeSeuss("DrSeuss.txt", "output0.txt", true, false);
-//
-//	makeSeuss trial4 = makeSeuss("DrSeuss.txt", "output1.txt", false, false);
+    /*
+	 * TEST 3:
+	 * 		hashing: adding ASCII values for the
+	 * 		collisons: quadratic probling
+	 */
+	makeSeuss trial3 = makeSeuss("DrSeuss.txt", "output_secondHash_firstColl.txt", true, false);
+
+	/*
+	 * TEST 4:
+	 * 		hashing: Use all N characters of string as an N-digit base-19 number
+	 * 		collisons: quadratic  probling
+	 */
+	makeSeuss trial4 = makeSeuss("DrSeuss.txt", "output_secondHash_secondColl.txt", false, false);
 return 0;
 }
